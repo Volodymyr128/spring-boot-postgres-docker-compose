@@ -1,0 +1,1 @@
+INSERT INTO ITEM VALUES (1, 'Take board game'), (2, 'Doctor'), (3, 'Fix the bag');

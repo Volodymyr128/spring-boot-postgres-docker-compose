@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  postgres:
+    image: "postgres"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: qweqwe123
+      POSTGRES_USER: postgres
+      POSTGRES_DB: springbootdb
+  web:
+    build: .
+    image: redis-client:1.0
+    ports: ['9000:9000']
+    volumes:
+      - /Users/volodymyr.bakhmatiuk/Desktop/redis/target:/code
+    links:
+      - postgres
